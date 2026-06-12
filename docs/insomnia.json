@@ -1,0 +1,187 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-06-12T11:29:26.913Z",
+  "__export_source": "backend-aula",
+  "resources": [
+    {
+      "_id": "wrk_backend",
+      "_type": "workspace",
+      "name": "Backend Aula"
+    },
+    {
+      "_id": "fld_api",
+      "_type": "request_group",
+      "parentId": "wrk_backend",
+      "name": "api"
+    },
+    {
+      "_id": "fld_Quarto",
+      "_type": "request_group",
+      "parentId": "fld_api",
+      "name": "Quarto"
+    },
+    {
+      "_id": "req_Quarto_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Quarto",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/quarto/listar"
+    },
+    {
+      "_id": "req_Quarto_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Quarto",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/quarto/buscar/:id"
+    },
+    {
+      "_id": "req_Quarto_POST",
+      "_type": "request",
+      "parentId": "fld_Quarto",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/quarto/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"numero\": 0,\n  \"tipo\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Quarto_PUT",
+      "_type": "request",
+      "parentId": "fld_Quarto",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/quarto/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"numero\": 0,\n  \"tipo\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Quarto_DELETE",
+      "_type": "request",
+      "parentId": "fld_Quarto",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/quarto/excluir/:id"
+    },
+    {
+      "_id": "fld_Reservas",
+      "_type": "request_group",
+      "parentId": "fld_api",
+      "name": "Reservas"
+    },
+    {
+      "_id": "req_Reservas_GET_ALL",
+      "_type": "request",
+      "parentId": "fld_Reservas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Listar",
+      "method": "GET",
+      "url": "http://localhost:3000/reservas/listar"
+    },
+    {
+      "_id": "req_Reservas_GET_ID",
+      "_type": "request",
+      "parentId": "fld_Reservas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Buscar",
+      "method": "GET",
+      "url": "http://localhost:3000/reservas/buscar/:id"
+    },
+    {
+      "_id": "req_Reservas_POST",
+      "_type": "request",
+      "parentId": "fld_Reservas",
+      "name": "Cadastrar",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "method": "POST",
+      "url": "http://localhost:3000/reservas/cadastrar",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"Nome\": \"string\",\n  \"dataEntrada\": \"string\",\n  \"dataSaida\": \"string\",\n  \"numeroQuarto\": 0,\n  \"tipoQuarto\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Reservas_PUT",
+      "_type": "request",
+      "parentId": "fld_Reservas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Atualizar",
+      "method": "PUT",
+      "url": "http://localhost:3000/reservas/atualizar/:id",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"Nome\": \"string\",\n  \"dataEntrada\": \"string\",\n  \"dataSaida\": \"string\",\n  \"numeroQuarto\": 0,\n  \"tipoQuarto\": \"string\"\n}"
+      }
+    },
+    {
+      "_id": "req_Reservas_DELETE",
+      "_type": "request",
+      "parentId": "fld_Reservas",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "name": "Excluir",
+      "method": "DELETE",
+      "url": "http://localhost:3000/reservas/excluir/:id"
+    }
+  ]
+}

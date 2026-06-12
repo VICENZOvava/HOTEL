@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🏨  Hotel Muito Top  🏨</h1>
+</header>
+
+<nav class="fluxo-nav">
+
+    <button onclick="mostrarTela('quartos')">
+        🏨 Lista de Quartos 🏨
+    </button>
+
+    <button onclick="modalQuarto.classList.remove('oculto')">
+        🏨 + Novo Quarto 🏨
+    </button>
+
+    <button onclick="mostrarTela('reservas')">
+        🏨 Lista de Reservas 🏨
+    </button>
+
+    <button onclick="abrirCadastroReserva()">
+        🏨 + Nova Reserva 🏨
+    </button>
+
+</nav>
+
+<section id="telaQuartos">
+
+    <h2 class="titulo-lista">Quartos</h2>
+    <main id="listaQuartos"></main>
+
+</section>
+
+<section id="telaReservas" class="oculto">
+
+    <div class="cabecalho-reservas">
+
+        <h2 class="titulo-lista">
+            Reservas
+        </h2>
+
+    </div>
+
+    <main id="listaReservas"></main>
+
+</section>
+
+<div id="modalQuarto" class="modal oculto">
+    <div class="janela">
+
+        <h2>Novo Quarto</h2>
+
+        <form id="formQuarto">
+
+            <label>Tipo</label>
+            <input type="text" id="tipo" required>
+
+            <button type="reset" onclick="modalQuarto.classList.add('oculto')">
+                Cancelar
+            </button>
+
+            <button type="submit">Salvar</button>
+
+        </form>
+
+    </div>
+</div>
+
+<div id="modalReserva" class="modal oculto">
+    <div class="janela">
+
+        <h2>Nova Reserva</h2>
+
+        <form id="formReserva">
+
+            <label>Nome</label>
+            <input type="text" id="nome" required>
+
+            <label>Entrada</label>
+            <input type="date" id="entrada" required>
+
+            <label>Saída</label>
+            <input type="date" id="saida" required>
+
+            <label>Número do Quarto</label>
+            <input type="number" id="numeroQuarto" required>
+
+            <button type="reset" onclick="modalReserva.classList.add('oculto')">
+                Cancelar
+            </button>
+
+            <button type="submit">Salvar</button>
+
+        </form>
+
+    </div>
+</div>
+
+<div id="detalhesQuarto" class="modal oculto">
+    <div class="janela">
+
+        <h2 id="tituloQuarto"></h2>
+
+        <label>Tipo</label>
+        <input type="text" id="tipoEdit">
+
+        <button onclick="salvarEdicaoQuarto()">Salvar</button>
+        <button onclick="excluirQuarto()">Excluir</button>
+        <button onclick="detalhesQuarto.classList.add('oculto')">Fechar</button>
+
+    </div>
+</div>
+
+<div id="detalhesReserva" class="modal oculto">
+    <div class="janela">
+
+        <h2 id="tituloReserva"></h2>
+
+        <label>Nome</label>
+        <input type="text" id="nomeEdit">
+
+        <label>Entrada</label>
+        <input type="date" id="entradaEdit">
+
+        <label>Saída</label>
+        <input type="date" id="saidaEdit">
+
+        <button onclick="salvarEdicaoReserva()">Salvar</button>
+        <button onclick="excluirReserva()">Excluir</button>
+        <button onclick="detalhesReserva.classList.add('oculto')">Fechar</button>
+
+    </div>
+</div>
+
+<footer>
+    <h3>by ® Vicenzo Vieira Varandas</h3>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
