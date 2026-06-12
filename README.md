@@ -30,8 +30,8 @@ Este projeto consiste em um sistema de gerenciamento de **quartos** e **reservas
 Para o FRONT, ultilizei o projeto fullstack de estacionamento que fiz em aula.
 
 <div align = "center">
-<img src = "print1.png">
-<img src = "print2.png">
+<img src = "https://raw.githubusercontent.com/VICENZOvava/HOTEL/refs/heads/main/wireframes/print1.png">
+<img src = "https://raw.githubusercontent.com/VICENZOvava/HOTEL/refs/heads/main/wireframes/print2.png">
 </div>
 
 ---
